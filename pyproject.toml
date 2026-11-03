@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zh-copy-lint"
+version = "0.1.0"
+description = "Lint Chinese copy for typography problems: spacing, punctuation, ellipsis, dashes."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Shen Wuyue" }]
+keywords = ["chinese", "typography", "linter", "proofreading", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://github.com/shenwuyue0202/zh-copy-lint"
+Issues = "https://github.com/shenwuyue0202/zh-copy-lint/issues"
+
+[project.scripts]
+zh-copy-lint = "zh_copy_lint.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["zh_copy_lint*"]
